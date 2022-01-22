@@ -6,6 +6,10 @@
     height: 80px;
 }
 
+.header-logo {
+    margin-left: 20px;
+}
+
 .navigation-list {
     display: flex;
     
@@ -21,7 +25,7 @@
     display: block;
     position: fixed;
     visibility: hidden;
-    top: 60px;
+    top: 80px;
     left: -100%;
     width: 100%;
     padding: 70px 0;
@@ -43,7 +47,7 @@
 .navigation-menu__item {
     display: block;
     margin: 7px 0;
-    color: blueviolet;
+    color: rgb(49, 52, 65);
     font-size: 16px;
     text-decoration: none;
     transition-duration: .5s;
@@ -57,6 +61,7 @@
     height: 20px;
     cursor: pointer;
     z-index: 1;
+    right: 20px;
 }
 
 .navigation__btn > span,
