@@ -9,3 +9,81 @@
 .navigation-list {
     display: flex;
 }
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    padding: 70px 0;
+    list-style: none;
+    text-align: center;
+    background-color: green;
+    box-shadow: 1px 0px 6px black;
+    transition-duration: .5s;
+}
+
+/* .mobile--navigation {
+    display: none;
+} */
+
+.navigation-menu__item {
+    display: block;
+    margin: 7px 0;
+    color: $li-before-color;
+    font-size: $li-font-size-16;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.navigation__btn {
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.navigation__btn > span,
+.navigation__btn > span::before,
+.navigation__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    transition-duration: .5s;
+}
+
+.navigation__btn > span::before {
+    content: "";
+    top: -7px;
+}
+
+.navigation__btn > span::after {
+    content: "";
+    top: 7px;
+}
+
+#menu__toggle:checked ~ .navigation__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .navigation__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .navigation__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
