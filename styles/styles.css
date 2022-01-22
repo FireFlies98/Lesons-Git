@@ -1,0 +1,111 @@
+.header  {
+    background: rgb(115, 136, 136);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-logo {
+    margin-left: 20px;
+}
+
+.navigation-list {
+    display: flex;
+    
+}
+
+.nav-item {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    padding: 70px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(99, 133, 131);
+    box-shadow: 1px 0px 6px black;
+    transition-duration: .5s;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+/* .mobile--navigation {
+    display: none;
+} */
+
+.navigation-menu__item {
+    display: block;
+    margin: 7px 0;
+    color: rgb(49, 52, 65);
+    font-size: 16px;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.navigation__btn {
+    display: block;
+    position: absolute;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+    right: 20px;
+}
+
+.navigation__btn > span,
+.navigation__btn > span::before,
+.navigation__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    transition-duration: .5s;
+}
+
+.navigation__btn > span::before {
+    content: "";
+    top: -7px;
+}
+
+.navigation__btn > span::after {
+    content: "";
+    top: 7px;
+}
+
+#menu__toggle:checked ~ .navigation__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .navigation__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .navigation__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.main {
+    background: url(../img.png) no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
